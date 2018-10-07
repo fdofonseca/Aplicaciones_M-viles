@@ -14,6 +14,7 @@ public class ResultadoActivity extends AppCompatActivity {
     TextView txvResultadoNombre;
     TextView txvResultadoPesoActual;
     TextView txvResultadoPesoIdeal;
+    TextView txvResultadoEstado;
 
 
     @Override
@@ -24,6 +25,7 @@ public class ResultadoActivity extends AppCompatActivity {
         txvResultadoNombre = (TextView) findViewById(R.id.txv_resultado_nombre);
         txvResultadoPesoActual = (TextView) findViewById(R.id.txv_resultado_peso_actual);
         txvResultadoPesoIdeal = (TextView) findViewById(R.id.txv_resultado_ideal);
+        txvResultadoEstado = (TextView) findViewById(R.id.txv_resultado_estado);
         // 3.- Capturamos el objeto de la clase Intent que se envía desde el MainAtivity
         Intent intento = getIntent();
         // 4.- Obtenemos los datos enviados en el Activity
@@ -45,6 +47,20 @@ public class ResultadoActivity extends AppCompatActivity {
         txvResultadoNombre.setText("Nombre: " + salud.getNombre());
         txvResultadoPesoActual.setText("Peso Actual: " + salud.getPesoRecibido());
         txvResultadoPesoIdeal.setText("Peso Ideal: " + salud.calcularPesoIdeal());
+
+        if (salud.getEstadoPeso() == 0){
+            txvResultadoEstado.setText("Está en su Peso Ideal");
+        }
+        if (salud.getEstadoPeso()== 2){
+            txvResultadoEstado.setText("Está Con Sobre Peso");
+        }
+        if (salud.getEstadoPeso() == 1){
+            txvResultadoEstado.setText("Está Con Bajo Peso");
+        }
+
+
+
+
 
     }
 }
