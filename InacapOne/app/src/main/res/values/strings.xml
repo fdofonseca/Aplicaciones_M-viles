@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Inacap One</string>
+    <string name="txt_titulo">Calculo Peso Ideal</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="txt_resultado">Resultado: </string>
+    <string name="hnt_ingrese_edad">Ingrese Edad...</string>
+    <string name="txt_titulo_resultado">Resultado Peso Ideal</string>
+    <string name="hnt_ingrese_nombre">Ingrese Nombre...</string>
+    <string name="hnt_peso">Ingrese peso actual...</string>
+</resources>
